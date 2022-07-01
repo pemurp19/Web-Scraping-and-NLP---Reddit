@@ -3,7 +3,7 @@
 -----
 ### Problem Statement
 
-I’m a data scientist with the StubHub Marketing team. We’re planning to run an ad campaign on reddit to boost ticket sales. In order to use our advertising budget most effectively, we want to strike a balance between casting a wide net and also tailoring our messaging to an audience that’ll be most receptive. Whether it’s better to target an individual team’s fan page or broader MLB fan page?
+I’m a data scientist with the StubHub Marketing team. We’re planning to run an ad campaign on reddit to boost ticket sales. In order to use our advertising budget most effectively, we want to strike a balance between casting a wide net and also tailoring our messaging to an audience that’ll be most receptive. Effectively, we want to determine whether it’s better to target an individual team’s fan page or broader MLB fan page?
 
 My goal is to analyze language in posts from both the Red Sox and MLB subreddits and answer the following two questions:
 1) Is it possible to build a classification model that accurately predicts whether a post came from an MLB or Red Sox reddit user with at least 70% accuracy? 
