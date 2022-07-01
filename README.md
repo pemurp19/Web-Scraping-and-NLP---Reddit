@@ -25,16 +25,18 @@ You may find full descriptions of the data found in the Reddit API .json in the 
 
 To provide some background on the two subreddits, the MLB page has nearly double the members, yet the distribution of word counts per post is relatively in line. Utilized Reddit’s Pushshift API to pull a total of 3,000 posts from each page from June, 2022 going back to September 2021. Having started by pulling 1,000, I realized in cleaning the data that I needed to pull significantly more posts to end up with 1,000 post to train my model on. For instance, I noticed that nearly 584 Red Sox posts were removed or deleted by the moderator, and 1,700 were null. Additionally, I removed video posts as I would need to train a classifier on text data, and realized that I could remove stop words to improve my models' accuracies (the top 15 words showing up on each page's post were stop words). 
 
-##### **insert histogram**
+![alt text](https://git.generalassemb.ly/pemurp96/project-3/blob/master/images/word_count_dist_dark.png)
 
 
 In terms of defining my problem statement, I relied on my EDA to inform realistic thresholds to shoot for - in other words, 70% accuracy, 70% F1 score and 70% precision. False positives and false negatives are equally harmful in this context which is why I've focused on optimizing the F1 score and precision. Note that each page includes similar words, such as "mlb" and "game," and I wanted to ensure that my target would be realistic given similarities across the pages and their posts.
 
-##### **insert top word comparison graph**
+![alt text](https://git.generalassemb.ly/pemurp96/project-3/blob/master/images/mlb_topwords_dark.png)
+
+![alt text](https://git.generalassemb.ly/pemurp96/project-3/blob/master/images/sox_topwords_dark.png)
 
 Using a combination of Count Vectorizers or Tfidf Vectorizers, I iterated through 11 classification model variations (including Logistic Regression, Multinomial Naive Bayes, Random Forest, and Boosting), tuning the optimal hyperparamaters by grid searching. A majority of the models were severely overfit, and particularly the boosting models. Wanted to strike a balance with the bias-variance tradeoff, while hitting the 70% accuracy target. Hence, I identified the best model as a Random Forest that implemented a Count Vectorizer. The model achieved 71.3% accuracy on the training data, a 70.6% F1 score, and 71.8% precision. 
 
-##### **insertconfusion matrix**
+![alt text]()
 
 
 -----
