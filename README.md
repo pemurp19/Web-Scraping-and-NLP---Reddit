@@ -36,7 +36,7 @@ In terms of defining my problem statement, I relied on my EDA to inform realisti
 
 Using a combination of Count Vectorizers or Tfidf Vectorizers, I iterated through 11 classification model variations (including Logistic Regression, Multinomial Naive Bayes, Random Forest, and Boosting), tuning the optimal hyperparamaters by grid searching. A majority of the models were severely overfit, and particularly the boosting models. Wanted to strike a balance with the bias-variance tradeoff, while hitting the 70% accuracy target. Hence, I identified the best model as a Random Forest that implemented a Count Vectorizer. The model achieved 71.3% accuracy on the training data, a 70.6% F1 score, and 71.8% precision. 
 
-![alt text]()
+![alt text](https://git.generalassemb.ly/pemurp96/project-3/blob/master/images/randomforest_confusion_dark.png)
 
 
 -----
